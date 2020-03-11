@@ -21,6 +21,16 @@
 
 //Code Here
 
+let user = {
+  username: 'jim',
+  email: 'jim@dvNtm.com',
+  getUsername: function (){
+    return this.username
+  }
+}
+
+
+
 
 
 ////////// PROBLEM 2 //////////
@@ -43,6 +53,8 @@ class Animal {
 
 //Code Here
 
+const animal1 = new Animal('d', 'd', 'd')
+
 
 
 ////////// PROBLEM 3 //////////
@@ -63,6 +75,7 @@ let who = {
 
 //Code Here
 
+let whoSaysHi = sayHi.bind(who)
 
 
 ////////// PROBLEM 4 //////////
@@ -76,7 +89,7 @@ function whatIsThis() {
 }
 
 // uncomment the line below and tell us what the context of "this" is for whatIsThis()
-//let context1 = ???
+let context1 = window
 
 let product = {
   name: 'snake plant',
@@ -87,7 +100,7 @@ let product = {
 let func = whatIsThis.bind(product)
 
 // uncomment the line below and tell us what the context of "this" is when we invoke func
-//let context2 = ???
+let context2 = product
 
 let vacation = {
   location: 'Hawaii',
@@ -98,7 +111,7 @@ let vacation = {
 }
 
 // uncomment the line below and tell us what the context of "this" is when we invoke vacation.whatIsThis
-//let context3 = ???
+let context3 = vacation
 
 
 class Family {
@@ -116,4 +129,4 @@ class Family {
 let family1 = new Family(2, 4, 1)
 
 // uncomment the line below and tell us what the context of "this" is for the instance of Family created above.
-//let context4 = ???
+let context4 = family1
